@@ -1,3 +1,18 @@
+// Bubble Sort is the simplest sorting algorithm that works by repeatedly swapping the adjacent elements if they are in wrong order.
+
+// Time Complexity: O(n) for best case, O(n2) for average and worst case
+
+// Space Complexity: O(1)
+
+// Input − A list of unsorted data: 56 98 78 12 30 51
+// Output − Array after Sorting: 12 30 51 56 78 98
+
+// bubbleSort(array, size)
+// Input: An array of data, and the total number in the array
+
+// Output: The sorted Array
+
+//Source Code
 #include<bits/stdc++.h>
 using namespace std;
 int main()
