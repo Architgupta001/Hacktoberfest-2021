@@ -27,4 +27,10 @@ About: I am Software Engineer At MNC <br>
 Name: [Rohith](https://github.com/rohith 1125)<br>
 Place: Hyderabad<br>
 About: I'm a CS Student<br>       
+
+5.) 
+Name: [Amankumar mahavar](https://github.com/amankumarmahavar)<br>
+Place: Dahod, gujarat<br>
+About: I'm a CS diploma student in GTU
 <hr>
+
