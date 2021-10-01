@@ -1,4 +1,4 @@
-*  Name - Archit Gupta<br>
-*  City - Greater Noida  <br>
-*  College - Galgotias University <br>
-*  Short intro - I  am a software developer   <br>
+*  Name - Archit Gupta
+*  City - Greater Noida  
+*  College - Galgotias University 
+*  Short intro - I  am a software developer  
