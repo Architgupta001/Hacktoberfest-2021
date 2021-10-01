@@ -40,4 +40,8 @@ Place: Saharanpur, Uttar Pradesh<br>
 About: Final Year CS Student , Coer
 <hr>
 
-
+7.)
+Name: [Jaya Ganesh Kumar](https://github.com/jayaganeshkumar)<br>
+Place: Vijayawada, Andhra Pradesh<br>
+About: I am CS student enthusiast in AIML
+<hr>
