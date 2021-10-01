@@ -34,3 +34,10 @@ Place: Dahod, gujarat<br>
 About: I'm a CS diploma student in GTU
 <hr>
 
+6.)
+Name: [Afzal Khan](https://github.com/afzall-khan)<br>
+Place: Saharanpur, Uttar Pradesh<br>
+About: Final Year CS Student , Coer
+<hr>
+
+
