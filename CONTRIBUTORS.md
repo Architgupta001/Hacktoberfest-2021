@@ -13,9 +13,6 @@ About: I am Computer Graduate and Beginner in Opensource in
 <hr>
 
 2)
-Name: [Abhishek Gupta](https://github.com/Im-Abhi)
-
-Place: Delhi
-
-About: I'm a FrontEnd Web-Developer
-
+Name: [Abhishek Gupta](https://github.com/Im-Abhi)<br>
+Place: Delhi<br>
+About: I'm a FrontEnd Web-Developer<br>
