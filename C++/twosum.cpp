@@ -44,3 +44,8 @@ int main(){
      return 0;
 
 }
+
+#This programme require number of elements which is stored in array.
+#and one target value has been given as input and to find the elements from the
+#array which will fullfill that target value inshort which make addtion to get the
+#ouput as target value
