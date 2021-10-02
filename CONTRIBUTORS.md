@@ -45,3 +45,9 @@ Name: [Jaya Ganesh Kumar](https://github.com/jayaganeshkumar)<br>
 Place: Vijayawada, Andhra Pradesh<br>
 About: I am CS student enthusiast in AIML
 <hr>
+
+8.)
+Name: [Jaivrat Das](https://github.com/Jaivrat12)<br>
+Place: Indore, M.P.<br>
+About: I'm a CS student
+<hr>
