@@ -9,7 +9,7 @@ Name: Palash Burad https://github.com/palash9561/<br>
 Place: Pune<br>
 About: I am Computer Graduate and Beginner in Opensource in
        about my hobbies so i love playing chess and badminton<br>
-       
+
 <hr>
 
 2)
@@ -28,7 +28,7 @@ Name: [Rohith](https://github.com/rohith 1125)<br>
 Place: Hyderabad<br>
 About: I'm a CS Student<br>       
 
-5.) 
+5.)
 Name: [Amankumar mahavar](https://github.com/amankumarmahavar)<br>
 Place: Dahod, gujarat<br>
 About: I'm a CS diploma student in GTU
@@ -50,4 +50,10 @@ About: I am CS student enthusiast in AIML
 Name: [Deep Gandhi](https://github.com/deepg7)<br>
 Place: Mumbai, Maharashtra<br>
 About: I am CS student. I am a web developer and love watching football.
+<hr>
+
+9.)
+Name: [Ayush Gupta](https://github.com/AyushGupta2002)<br>
+Place: Lucknow, Uttar Pradesh</br>
+About: I am a CSE student. I am a web developer and competitive programmer.
 <hr>
