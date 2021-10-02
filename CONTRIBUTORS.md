@@ -45,3 +45,9 @@ Name: [Jaya Ganesh Kumar](https://github.com/jayaganeshkumar)<br>
 Place: Vijayawada, Andhra Pradesh<br>
 About: I am CS student enthusiast in AIML
 <hr>
+
+8.)
+Name: [Deep Gandhi](https://github.com/deepg7)<br>
+Place: Mumbai, Maharashtra<br>
+About: I am CS student. I am a web developer and love watching football.
+<hr>
