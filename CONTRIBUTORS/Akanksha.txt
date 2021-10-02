@@ -1,0 +1,4 @@
+Name      - Akanksha Joshi.
+City      - Hyderabad.
+College   - IIIT Sricity,Chitoor.
+Shortinfo - I am a ECE student 
