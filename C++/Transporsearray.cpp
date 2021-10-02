@@ -21,10 +21,9 @@ int main()
               B[i][j]=A[j][i];
        }
     for(i=0;i<n;i++)
-       {
-           for(j=0;j<n;j++)
+       {    for(j=0;j<n;j++)
               cout<< B[i][j]<<"\t";
-
-              cout<<endl;
+              
+        cout<<endl;
        }
 }
