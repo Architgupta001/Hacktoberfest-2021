@@ -5,17 +5,17 @@ Repository designed for beginner to contribute to open-source
 # How to contribute
 Add a question and provide the solution for the same
 Steps -
-Step a) Click on Issues tab
-Step b) Click on New Issue button
-Step c) Click Get Started button
-Step d) Fill a short description form
-Step e) Press Submit New Issue button
-Step f) Now Comment - "Kindly assign this issue to me"
-Step g) Press on Comment button
-Step h) Wait for the issue to be assigned to you.
-Step i) After the issue get assigned to you.
-You'll also receive my comment stating in which folder the solution needs to be placed as well as the deadline for solution submission.
-Step j) Now you can workout the solution and generate PR(Pull request).
+Step a) Click on Issues tab <br>
+Step b) Click on New Issue button <br>
+Step c) Click Get Started button <br>
+Step d) Fill a short description form <br>
+Step e) Press Submit New Issue button <br>
+Step f) Now Comment - "Kindly assign this issue to me" <br>
+Step g) Press on Comment button <br>
+Step h) Wait for the issue to be assigned to you. <br>
+Step i) After the issue get assigned to you.<br>
+You'll also receive my comment stating in which folder the solution needs to be placed as well as the deadline for solution submission. <br>
+Step j) Now you can workout the solution and generate PR(Pull request). <br>
 
 # Instructions:
 
