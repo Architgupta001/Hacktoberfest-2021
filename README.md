@@ -3,8 +3,19 @@
 Repository designed for beginner to contribute to open-source
 
 # How to contribute
-
-Submit your pull request here for Hacktoberfest-2021 in any language you prefer, if language folder not present, create one as a part of it, after script add your name and GitHub profile into Contributors.md file.
+Add a question and provide the solution for the same
+Steps -
+Step a) Click on Issues tab
+Step b) Click on New Issue button
+Step c) Click Get Started button
+Step d) Fill a short description form
+Step e) Press Submit New Issue button
+Step f) Now Comment - "Kindly assign this issue to me"
+Step g) Press on Comment button
+Step h) Wait for the issue to be assigned to you.
+Step i) After the issue get assigned to you.
+You'll also receive my comment stating in which folder the solution needs to be placed as well as the deadline for solution submission.
+Step j) Now you can workout the solution and generate PR(Pull request).
 
 # Instructions:
 
