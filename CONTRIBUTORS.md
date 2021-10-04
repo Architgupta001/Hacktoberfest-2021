@@ -57,3 +57,10 @@ Name: [Ayush Gupta](https://github.com/AyushGupta2002)<br>
 Place: Lucknow, Uttar Pradesh</br>
 About: I am a CSE student. I am a web developer and competitive programmer.
 <hr>
+
+10.)
+Name: [S Harshita](https://github.com/harshita2216)<br>
+Place: Jamshedpur, Jharkhand</br>
+About: CSE Undergrad • Web Developer • Open-source Enthusiat 
+<hr>
+
