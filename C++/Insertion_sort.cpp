@@ -1,50 +1,38 @@
-// Insertion sort
-#include <bits/stdc++.h>
+#include<iostream>
 using namespace std;
-// Question:
-// Sort the elements of the array in non-decreasing order using insertion sort.
 
-// This function is called by reference.
-void insertionSort(vector<int>& nums)
-{
-	int i, key, j, n=nums.size();
-	for (i = 1; i < n; i++)
-	{
-		// To sort the array we will first pick the ith element as key.
-		// And find the proper position for it.
-		// The position before that all elements in the array are smaller than key.
-		// We will shift all the elements from that position to right of it.
-		key = nums[i];
-		j = i - 1;
-		
-		// This while loop will shift the elements in right.
-		while (j >= 0 && nums[j] > key)
-		{
-			// j+1th element takes the value of jth element
-			nums[j + 1] = nums[j];
-			j = j - 1;
-		}
-		
-		// The loop will stop once we find the correct position.
-		// And j+1 is the correct position for that particular element.
-		nums[j + 1] = key;
-	}
+void printArray(int array[], int size){
+    int i;
+    for (i=0; i < size; i++)
+        cout<<array[i]<<" ";
+    cout<<endl;
 }
 
-int main()
-{
-    int n;
-    cin>>n;
+void insertionSort(int array[], int n){
+    int i, key, j;
+    for (i = 0; i < n; i++){
+        key = array[i];
+        j = i-1;
+        while (j >= 0 && array[j] > key)
+        {                     // find the correct position of the element
+            array[j+1] = array[j];        // shift all lesser elements
 
-    vector<int> nums(n);
-    for(int i=0; i<n; i++){
-        cin>>nums[i];
+            j = j-1;
+        }
+        array[j+1] = key;           // place the element at position
     }
-
-    insertionSort(nums);
-    for(int i=0; i<n; i++){
-        cout<<nums[i]<<" ";
-    }
-
-	return 0;
 }
+
+int main(){
+    int array[] = {15, 11, 14, 12, 18};
+    int n = 5; 
+    /* we can calculate the number of elements in an array by using sizeof(array)/sizeof(array[0]).*/
+    cout<<"Un-Sorted array:"<<endl;
+    printArray(array, n);     // Unsorted array
+    insertionSort(array, n);     // Call the sorting routine
+    cout<<endl<<"Sorted array:"<<endl;
+    printArray(array, n);   // Sorted array
+    return 0;
+}
+
+/* add tail for c++ if necessary*/
