@@ -64,3 +64,8 @@ Place: Jamshedpur, Jharkhand</br>
 About: CSE Undergrad • Web Developer • Open-source Enthusiat 
 <hr>
 
+11.)Name: [Likhitha Tadikonda](https://github.com/LikhithaTadikonda)<br>
+Place: Vijayawada, Andhra Pradesh<br>
+About: CSE UnderGrad. ,specialized in AIML
+<hr>
+
