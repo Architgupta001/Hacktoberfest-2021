@@ -1,4 +1,4 @@
-decimal_input = int(input())
+decimal_input = int(input("Enter decimal number: "))
 def dec_to_bin(decimalnumber):
     binary = ""
     while(decimalnumber!=0):
@@ -13,7 +13,7 @@ dec_to_bin(decimal_input)
 
 
 
-binary_input = input()
+binary_input = input("Enter binary number: ")
 def bin_to_dec(binarynumber):
     binarynumber = binarynumber[::-1]
     i = 0
