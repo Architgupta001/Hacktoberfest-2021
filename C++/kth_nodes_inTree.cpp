@@ -12,7 +12,7 @@ class treenode{
 		this->data=data;
 	} 
 };
-treenode<int>* input2()
+treenode<int>* input2()        //input function
 {
 	int d;
 	cout<<"Enter data"<<endl;
@@ -43,7 +43,7 @@ treenode<int>* input2()
 	return root;
 }
 
-void printk(treenode<int>* root,int k)
+void printk(treenode<int>* root,int k)          //prinitng kth nodes
 {
 	if(root==NULL)
 	{
@@ -55,18 +55,18 @@ void printk(treenode<int>* root,int k)
 	}
 	for(int i=0;i<root->child.size();i++)
 	{
-		printk(root->child[i],k-1);
-	}
+		printk(root->child[i],k-1);                         
+	} 
 }
 
 int main()
 {
-	treenode<int> *root=input2();
+	treenode<int> *root=input2();        //taking input
 	int k;
-	cout<<"Enter the node to be find :"<<endl;
-	cin>>k;
+	cout<<"Enter the row whose nodes to be find out :"<<endl;        //0,1,2,...
+	cin>>k;  
 	cout<<endl;
-	printk(root,k);
+	printk(root,k);   //print nodes in kth node
 	return 0;
 }
 
