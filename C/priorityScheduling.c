@@ -1,4 +1,8 @@
 #include<stdio.h>
+
+// priority scheduling algorithm for CPU scheduling
+
+// sorting the processes according to their priority order
  void sort(int p[], int n, int pr[], int bt[])
  {   
     int i,j,pos,temp;
@@ -24,8 +28,9 @@
         p[i]=p[pos];
         p[pos]=temp;
     }
- 
  }
+
+// calculating the wait time for each proccess and total wait time
  int wait_time(int p[], int n, int wt[], int bt[])
  {
     int i,j;
@@ -42,6 +47,7 @@
     return total;
  }
 
+// for calculating average waiting time and average turnaround time
  void avg_time(int p[],int pr[], int n, int bt[])
  {
     int wt[n],tat[n],i;
@@ -64,6 +70,7 @@
     
  }
  
+//driver code- taking input for processes, burst times and priority of each process 
 int main()
 {
     int bt[20],p[20],wt[20],tat[20],pr[20],i,j,n,pos,temp;
