@@ -1,13 +1,15 @@
+//Program for tree Traversals
 #include <bits/stdc++.h>
 using namespace std;
 
+//Node class that consist a data variable n left and right point 
 class tree
 {
 public:
     int data;
     tree *left;
     tree *right;
-    tree()
+    tree() 
     {
         data = 0;
         left = NULL;
@@ -21,6 +23,7 @@ public:
     }
 };
 
+// recursive preOrder traversal
 void preOrder(tree *root)
 {
     if (root != NULL)
@@ -31,6 +34,7 @@ void preOrder(tree *root)
     }
 }
 
+// recursive inOrder traversal
 void inOrder(tree *root)
 {
     if (root != NULL)
@@ -41,6 +45,7 @@ void inOrder(tree *root)
     }
 }
 
+// recursive posrOrder traversal
 void postOrder(tree *root)
 {
     if (root != NULL)
@@ -51,6 +56,7 @@ void postOrder(tree *root)
     }
 }
 
+//level order traverse or BFS using queue
 void levelOrder(tree *root)
 {
     if (root != NULL)
@@ -76,6 +82,7 @@ void levelOrder(tree *root)
 
 int main()
 {
+    //making tree using heap
     tree *n1 = new tree(1);
     n1->left = new tree(2);
     n1->right = new tree(3);
@@ -84,16 +91,20 @@ int main()
     n1->right->left = new tree(6);
     n1->right->right = new tree(7);
     /*
-		Tree:   1
+		Tree:       1
 			   / \
-			  2	  3
+			  2    3
 			 / \  / \
 			4  5  6  7
 
 	*/
-    // preOrder(n1);
-    // inOrder(n1);
-    // postOrder(n1);
+    cout<<"PreOrder traversal:"<<" ";	
+    preOrder(n1);
+    cout<<endl<<"inOrder traversal:"<<" ";	
+    inOrder(n1);
+    cout<<endl<<"postOrder traversal:"<<" ";
+    postOrder(n1);
+    cout<<endl<<"levelOrder traversal:"<<" ";
     levelOrder(n1);
     return 0;
 }
