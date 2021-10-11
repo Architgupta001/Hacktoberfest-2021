@@ -11,15 +11,22 @@ int main(){
 	}
 
 	// Implementation of Insertion Sort
+	// Traverse each element in array and shift it to its correct position
 	for (int i = 1; i < n; i++){
+		
 		int j = i;
-		// Put the element in right position
+		
+		// Shift the element to the left while it is greater than its adjacent(left) element
 		while (j > 0 && arr[j - 1] > arr[j]){
+			
+			// shuffling with the elements greater than current element (to its left)
 			temp = arr[j];
 			arr[j] = arr[j - 1];
 			arr[j - 1] = temp;
 			j--;
+			
 		}
+		// Element placed to its correct position
 	}
 
 	// Print the resulted array
