@@ -1,67 +1,75 @@
-// This code prints the longest common subsequence between two strings using dp
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
-#define fast              ios::sync_with_stdio(false);cin.tie(0);
 
-string printlongestsequence(string a, string b)
+#define ll long long int
+#define pll pair<ll, ll>
+#define vl vector<ll>
+#define pb push_back
+#define f(i, a, b) for (ll i = a; i < b; ++i)
+#define rev(i, a, b) for (ll i = a; i >= b; --i)
+#define print(x) cout << x << endl
+#define endl '\n'
+#define F first
+#define S second
+#define setbits(x) __builtin_popcountll(x)
+#define zerobits(x) __builtin_ctzll(x)
+#define to(n) to_string(n)
+#define low(v, n) lower_bound(v.begin(), v.end(), n) - v.begin()
+#define upp(v, n) upper_bound(v.begin(), v.end(), n) - v.begin()
+#define mod 1000000007
+#define mex 100005
+
+int main()
 {
-    int n=a.length(), m=b.length();
-    int t[n+1][m+1];
+    ios_base::sync_with_stdio(0);
+    cin.tie(0);
+    cout.tie(0);
 
-    // initialising matrix
-    for(int i=0;i<=n;i++)
+    string s1, s2;
+    cin >> s1 >> s2;
+
+    ll a = s1.size();
+    ll b = s2.size();
+
+    string r = "";
+
+    ll dp[a + 1][b + 1];
+    memset(dp, 0, sizeof(dp));
+
+    f(i, 1, a + 1)
     {
-        for(int j=0;j<=m;j++)
+        f(j, 1, b + 1)
         {
-            if(i==0 || j==0)
+            if (s1[i - 1] == s2[j - 1])
             {
-                t[i][j]=0;
+                dp[i][j] = 1 + dp[i - 1][j - 1];
+            }
+            else
+            {
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1]);
             }
         }
     }
 
-    //filling matrix
-    for(int i=1;i<=n;i++)
+    while (a > 0 && b > 0)
     {
-        for(int j=1;j<=m;j++)
+        if (s1[a - 1] == s2[b - 1])
         {
-            if(a[i-1]==b[j-1])
-                t[i][j]= 1+ t[i-1][j-1];
-            else
-                t[i][j]= max(t[i-1][j], t[i][j-1]);
+            r.pb(s1[a - 1]);
+            a--;
+            b--;
+        }
+        else if (dp[a - 1][b] > dp[a][b - 1])
+        {
+            a--;
+        }
+        else
+        {
+            b--;
         }
     }
 
-    string answer="";
-    int i=n,j=m;
-
-    while(i>0 && j>0)
-    {
-        if(a[i-1]==b[j-1])
-        {
-            answer.push_back(a[i-1]);
-            i--, j--;
-        }
-        else{
-            if(t[i-1][j] > t[i][j-1])
-                i--;
-            else
-                j--;
-        }
-    }
-
-    reverse(answer.begin(), answer.end());
-    return answer;
-
-
-}
-
-int main()
-{
-    fast
-    string a="AGGTAB";
-    string b="GXTXAYB";
-
-    cout<< printlongestsequence(a,b);
+    reverse(r.begin(), r.end());
+    print(r);
     return 0;
 }
