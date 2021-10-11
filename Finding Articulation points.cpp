@@ -2,6 +2,16 @@
 number of connected components
 1. Endpoints of bridges are articulation points if their degree>=2
 2. Articulation poit may or may not be end point of a bridge.
+
+let in[v] denote entry time for node v. We will introduce an array low[v] which will let us check the fact for each vertex v. 
+low[v] is the minimum of in[v], the entry times tin[p] for each node p that is connected to node v via a back-edge (v,p).So, 
+we will minimise the in[v].
+
+there is a back edge from vertex v or one of its descendants to one of its ancestors if and only if vertex v has a child to for which low[to]<tin[v]. 
+If low[to]=in[v], the back edge comes directly to v, otherwise it comes to one of the ancestors of v.
+
+Thus, the vertex v in the DFS tree is an articulation point if and only if low[to]≥in[v].
+
 */
 
 #include <bits/stdc++.h>
