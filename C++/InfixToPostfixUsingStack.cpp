@@ -55,23 +55,28 @@ void infixToPostfix(char exp[]){
     char stack[strlen(exp)];
     char left='(', right=')';
     
-    //step 2
+    //step 2 - push '(' into the stack
    push(stack, '(');
     
-    //step 3
+    //step 3 - scan the expression from left to right and perform the following operations until the stack is empty
     int i, k=-1;
      while(isempty()==1){
        for(i=0; i<strlen(exp); i++){
            
+            //if an operand is encountered, add it to the output expression
             if(Operand(exp[i])){
                 exp[++k]=exp[i];
             }
-            
+           
+            //if a left parenthesis is encountered, push it onto stack
             else if(exp[i]=='('){
                 push(stack, exp[i]);
                
             }
             
+           /*if an operator is encountered, repeatedly pop from stack and add each operator (from the top of stack)
+           to output expression which has the same precedence as or higher precedence than operator.
+           Then add operator to stack. */
             else if(Operator(exp[i])){
             	
                 char x;
@@ -87,6 +92,9 @@ void infixToPostfix(char exp[]){
                 push(stack, exp[i]);
             }
             
+           /*if a right parenthesis is encountered, then repeatedly pop from stack and add each operator 
+           (from the top of stack) to output expression until a left parenthesis is encountered.
+           Then remove the left parenthesis. */
             else if(exp[i]==right){
                 char x;
                 x = pop(stack);
@@ -100,6 +108,8 @@ void infixToPostfix(char exp[]){
     
         }
     }
+    
+    //adding NULL terminator to the end of the output expression
     exp[++k] = '\0';
     //end
     cout<<exp;
@@ -113,7 +123,7 @@ int main()
     cin>>exp;
     fflush(stdin);
     
-    //step 1
+    //step 1 - add ')' to the end of your expression
     strcat(exp,brack);
     infixToPostfix(exp);
     return 0;
