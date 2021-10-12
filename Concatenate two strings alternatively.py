@@ -1,4 +1,4 @@
-#Concatenate two strings Alternatively with of same length
+#Concatenate two strings Alternatively of same length
 
 #Take two Strings
 s1 = "abc"
