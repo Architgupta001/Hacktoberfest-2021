@@ -63,7 +63,6 @@ void lcs_length(char *x,char *y)
     printf("%d \n",c[m][n]);
 }
 
-
 int main()
 {
     char x[20],y[20];
