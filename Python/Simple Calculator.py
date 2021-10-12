@@ -1,13 +1,18 @@
+#Simple Calculator
+
+#Function for Addition
 def add(x, y):
     return x + y
 
+#Function for Subtraction
 def subtract(x, y):
     return x - y
 
+#Function for multiplication
 def multiply(x, y):
     return x * y
 
-
+#Function for Division
 def divide(x, y):
     return x / y
 
@@ -20,6 +25,7 @@ print("4.Divide")
 
 while True:
     
+    #Get the user input
     choice = input("Enter choice(1/2/3/4): ")
 
     if choice in ('1', '2', '3', '4'):
@@ -39,10 +45,11 @@ while True:
             print(num1, "/", num2, "=", divide(num1, num2))
         
   
-        
+        #If user wants to continue to calculation
         next_calculation = input("Let's do next calculation? (yes/no): ")
         if next_calculation == "no":
           break
     
+    #Invalid user input
     else:
         print("Invalid Input")
