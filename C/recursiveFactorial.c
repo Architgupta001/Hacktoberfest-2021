@@ -16,9 +16,9 @@ long factorial(int n){
 // main method
 int main(){
 
-	int n;
+    int n;
     printf("Enter a number: ");
     scanf("%d",&n);
     printf("%d! = %ld\n", n, factorial(n));
-	return 0;
+    return 0;
 }
