@@ -3,11 +3,11 @@ public class ReverseArray {
 	// Reversing array
     static void reverseArray(int arr[], int n) {
 		 
-	for(int i = 0, j = n - 1; i < j; i++, j--){
-		int t = arr[i];
-		arr[i] = arr[j];
-		arr[j] = t;
-	}
+		for(int i = 0, j = n - 1; i < j; i++, j--){
+			int t = arr[i];
+			arr[i] = arr[j];
+			arr[j] = t;
+		}
     }
     
     // printing array
@@ -15,8 +15,7 @@ public class ReverseArray {
     	
     	for(int i = 0; i < arr.length; i++)
     	System.out.print(arr[i] + " ");
-    	System.out.println();
-    	
+    	System.out.println();	
     }
 
 	// main method
