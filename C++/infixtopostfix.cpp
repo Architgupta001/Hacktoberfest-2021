@@ -1,121 +1,68 @@
-#include<stdio.h>
-#include<stdlib.h>
-#include<iostream>
-#include<string.h>
-using namespace std;
+ #include<bits/stdc++.h>
+ using namespace std;
 
-struct stack{
-    int size;
-    int top;
-    char *arr;
-};
-int isEmpty(struct stack* ptr){
-    if (ptr->top<0){
+// Precedence order of operators 
+ int precedence(char x){
         
-        return 1;
-    }else{
-        return 0;
-    }
+	if(x == '^')
+		return 4;
+	else if(x == '*' || x == '/')
+		return 3;
+	else if(x == '+' || x == '-')
+		return 2;
+	else
+		return -1;
 }
-int isFull(struct stack* ptr){
-    if (ptr->top>ptr->size-1){
+
+// conversion: Infix --> Postfix
+string infixToPostfix(string s){
         
-        return 1;
-    }else{
-        return 0;
-    }
-}
-
-void push(struct stack *ptr,int val){
-    if(isFull(ptr)){
-        printf("Stack overflow ");
+	stack<char> st;
+	string res = "";
+    
+    // traverse whole string   
+	for(auto x : s){
+		// if character is operand then add it to res
+		if((x >= 'a' && x <= 'z') || (x >= 'A' && x <= 'Z') )
+			res += x;
+		// if current character is '(' then push it into stack
+		else if( x == '(')
+			st.push(x);
+		// if current character is ')' then pop it until we find '(' and add all poped elements into res
+		else if(x == ')'){
+			while(st.top() != '('){
+				res += st.top();
+				st.pop();
+			}
+		// pop '('
+			st.pop();
+		}else {
+			// upto stack is not empty and precedence order of current operator is less than top operator  
+			while(!st.empty() && precedence(x) <= precedence(st.top())){
+				res += st.top();
+				st.pop();
+			}
+			// push current operator into stack
+			st.push(x);
+		}
+	}
+    
+    // pop all from stack and add it to our answer
+	while(!st.empty()){
+		res += st.top();
+		st.pop();
+	}
         
-    }
-    else{
-        ptr->top++;
-        ptr->arr[ptr->top]=val;
-    }
-}
-int pop(struct stack *ptr){
-    if(isEmpty(ptr)){
-        printf("Stack underflow");
-        return -1;
-        
-    }
-    else{
-        int val=ptr->arr[ptr->top];
-        ptr->top--;
-        return val;
-    }
-}
-int stackTop(struct stack *ptr){
-    return (ptr->top);
-}
-
-int precedence(char ch){
-    if(ch=='*'||ch=='/'){
-        return 3;
-    }
-    else if(ch=='+' || ch=='-'){
-        return 2;
-    }
-    else{
-        return 0;
-    }
-
-}
-int isOperator(char ch){
-    if(ch=='+' || ch=='-' || ch=='*' || ch=='/'){
-        return 1;
-    }
-    else{
-        return 0;
-    }
-}
-char * infixtopostfix(char* infix){
-    struct stack *sp=new struct stack[sizeof(struct stack)];
-    sp->size=100;
-    sp->top=-1;
-    sp->arr=new char[sizeof(char)*sp->size];
-    char *postfix=new char[sizeof(char)*strlen(infix+1)];
-    int i=0;//track infix
-    int j=0;//track postfix;
-    while(infix[i]!='\0'){
-        if(!isOperator(infix[i])){
-            postfix[j]=infix[i];
-            j++;
-            i++;
-
-        }
-        else{
-            if(precedence(infix[i])>precedence(stackTop(sp))){
-                push(sp,infix[i]);
-                i++;
-            }
-            else{
-                postfix[j]=pop(sp);
-                j++;
-            }
-
-        }
-        
-
-
-    }
-    while(!isEmpty(sp)){
-            postfix[j]=pop(sp);
-            j++;
-        }
-        postfix[j]='\0';
-        return postfix;
-
+	return res;
 }
 
 int main(){
-    char *infix="p-q-r/a";
-    printf("%s",infixtopostfix(infix));
-    
-    
 
-
+	string infix = "A*(B+C)/D";	
+	
+	// output: ABC+*D/
+	cout << infixToPostfix(infix) << endl;
+	return 0;
 }
+    
+    
