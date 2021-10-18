@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Clock</title>
+    <style>
+        body {
+            background-image: url('k.jpg');
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .clock {
+            width: 30rem;
+            height: 30rem;
+            border: 20px solid white;
+            border-radius: 50%;
+            box-sizing: 0 0 20px rgb(23, 89, 133);
+        }
+
+        .clock-face {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform: translateY(-3px);
+        }
+
+        .hand {
+            width: 48%;
+            height: 6px;
+            margin-left: 2%;
+            background: black;
+            position: absolute;
+            top: 50%;
+            transform: rotate(90deg);
+            transform-origin: 100%;
+            transition: all 0.05s;
+            transition-timing-function: cubic-bezier(0, 2.69, 0.58, 1);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="clock">
+        <div class="clock-face">
+            <div class="hand hour"></div>
+            <div class="hand minute"></div>
+            <div class="hand second"></div>
+        </div>
+    </div>
+    <script src="App.js"></script>
+</body>
+
+</html>
