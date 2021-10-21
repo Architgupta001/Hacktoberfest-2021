@@ -8,7 +8,7 @@ using namespace std;
 void LIS(int arr[], int n){                                                     // Beginning of the function
     vector <int> dp(1,arr[0]);                                                  // Initializing a dynamic array of size 1 and value as arr[0]
     for(int i=1; i<n; i++){                                                         
-        if(arr[i] < dp.back()){                                                 // If the current element in array is less than the last element of vector dp
+        if(arr[i] =< dp.back()){                                                 // If the current element in array is less than or equal to the last element of vector dp
             int j = lower_bound(dp.begin(),dp.end(),arr[i]) - dp.begin();       // then we find the lowest integer in the vector dp with value more than or equal to arr[i]
             dp[j] = arr[i];                                                     // and replace that integer with arr[i] using lower_bound (binary search)
         }
