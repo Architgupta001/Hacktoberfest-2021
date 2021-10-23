@@ -1,0 +1,53 @@
+.images{
+    display:grid;
+    grid-template-columns: repeat(auto-fill,minmax(250px , 1fr));
+    grid-gap : 1px 5px;
+    grid-auto-rows: 13px;
+    margin-top:80px;
+}
+
+.images img{
+    width:250px;
+    grid-row-end: span 2;
+    border-radius: 5px;
+    box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.7);
+}
+
+#top{
+    border-radius:40px;
+    top:30px;
+}
+
+.field{
+    display:flex;
+    width:82%;
+    
+}
+.logo{
+   position:absolute;
+   height:65%;
+   width: 25%;
+   left:2vw;
+   background-image:url(./imagify\ Logo.png);
+   background-size: 150px;
+   background-repeat:no-repeat;
+}
+#top:hover{
+    transition: all 0.2s ease-in-out;
+    box-shadow:0px 0px 7px -2px rgba(0,0,0,0.7);
+}
+.images img:hover{
+    transition: all 0.2s ease-in-out;
+    transform:scale(1.01);
+    box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.7);
+}
+
+@media screen and (max-width:800px)
+{
+  .logo{
+    background-size: 100px;
+  }
+  .field{
+      width:65%;
+  }
+}
