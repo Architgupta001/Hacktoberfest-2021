@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in HTML</title>
+</head>
+<body>
+    <header>
+		<h1>Admission Form</h1>
+	</header>
+
+	<main>
+		<section>
+			<h3>Register to our website and get latest news in your email.</h3>
+			<form action="confirmation.html" method="post">
+				<fieldset>
+					<legend>Personal Information</legend>
+					<p>
+						<label for="firstname">First Name:</label>
+						<input type="text" name="firstname" id="firstname">
+					</p>
+					<p>
+						<label for="lastname">Last Name:</label>
+						<input type="text" name="lastname" id="lastname">
+					</p>
+					<p>
+						<label for="password">Password:</label>
+						<input type="password" name="password" id="password">
+					</p>
+					<p>
+						<label for="email">E-Mail:</label>
+						<input type="email" name="email" id="email">
+					</p>
+					<p>
+						<label for="birthday">Birthday:</label>
+						<input type="date" name="birthday" id="birthday">
+					</p>
+				</fieldset>
+					
+				<br>
+				<fieldset>
+					<legend>What is your gender?</legend>
+					<input type="radio" id="male" name="gender" value="male">
+					<label for="male">Male</label>
+          <br>
+          <input type="radio" id="female" name="gender" value="female">
+          <label for="female">Female</label>
+				</fieldset>
+
+				<br>
+				<fieldset>
+					<legend>What are your favorite teams?</legend>
+					<input type="checkbox" name="" id="" value="">
+					<label for="Mumbai">Mumbai Indians</label>
+					<br>
+					<input type="checkbox" name="" id="" value="">
+					<label for="Chennai">Chennai Super Kings</label>
+					<br>
+					<input type="checkbox" name="" id="" value="">
+					<label for="Banglore">Royal Challangers Banglore</label>						
+					<br>
+					<input type="checkbox" name="" id="" value="">
+					<label for="Kolkata">Kolkata Knight Riders</label>
+					<br>
+					<input type="checkbox" name="" id="" value="">
+					<label for="Delhi">Delhi Capitals</label>
+				</fieldset>
+
+				<br>
+				<button type="submit">Register</button>
+				<button type="reset">Reset</button>
+			</form>
+		</section>
+	</main>
+
+	<footer>
+		<p>
+			<a href="form.html">Back Home</a>
+		</p>
+	</footer>	
+</body>
+</html>
